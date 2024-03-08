@@ -1,0 +1,17 @@
+.navbar {
+  height: 3em;
+  margin-bottom: 1em;
+}
+
+.img-responsive {
+  width: 3em;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+li:hover {
+  // animation underline from left to right
+  border-bottom: 1px solid #000;
+  transition: all 0.3s ease;
+}
