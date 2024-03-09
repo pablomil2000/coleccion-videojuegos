@@ -1,9 +1,17 @@
 // import './Container.scss'
+import {
+  // Coalesce,
+  // Shift,
+  Swirl,
+  // Aurora, 
+  // Pipeline,
+  // CanvasBackground
+} from 'ambient-cbg'
 export default function Error ({ children }) {
   return (
 
-
-    <div className="bg-background-color">
+    <div>
+      <Swirl />
       { children }
     </div>
 

@@ -14,7 +14,7 @@ module.exports = {
         mytheme: {
           "primary": "#003366",
           "secondary": "#0f0f0f",
-          "background-color": "#123d3f",
+          // "background-color": "#123d3f",
           "background-color-secondary": "#FFFF00"
         },
       },
