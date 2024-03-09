@@ -32,6 +32,7 @@ export default function Registro ({ children, bg }) {
       password
     }
 
+    // Datos enviados
     // console.log(data);
 
     const response = await fetch('http://localhost:3002/user', {
@@ -41,9 +42,29 @@ export default function Registro ({ children, bg }) {
       },
       body: JSON.stringify(data)
     })
-    let result = response.json()
-    console.log(result);
 
+    // Respuesta server
+    console.log('Respuesta server');
+    const json = await response.json()
+
+    console.log(json);
+
+    if (response.status === 400) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'El usuario ya existe',
+      })
+    } else if (response.status === 201) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Usuario registrado',
+        showConfirmButton: false,
+        timer: 1500
+      }).then(() => {
+        window.location.href = '/login'
+      })
+    }
   }
 
   return (
