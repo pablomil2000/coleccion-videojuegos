@@ -1,20 +1,19 @@
-export default function Card () {
+export default function Card ({ platform }) {
+  // console.log(platform);
   return (
-    <div className="m-3">
-      <div class="relative grid h-[40rem] w-full max-w-[28rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
-        <div
-          class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://via.placeholder.com/400')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-          <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
-        </div>
-        <div class="relative p-6 px-6 py-14 md:px-12">
-          <h2 class="mb-6 block font-sans text-4xl font-medium leading-[1.5] tracking-normal text-white antialiased">
-            Plataforma
-          </h2>
-          <h5 class="block mb-4 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-gray-400">
-            Contenido
-          </h5>
-          <a href="/" class="btn btn-primary">ver mas</a>
-        </div>
+    <div className="mx-auto mb-3 xl:mx-auto">
+      <div className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+        <a href="/">
+          <img src={ platform.image }
+            alt="Product" className="h-80 w-72 object-cover rounded-t-xl" />
+          <div className="px-4 py-3 w-72">
+            <span className="text-gray-400 mr-3 uppercase text-xs">plataforma</span>
+            <p className="text-lg font-bold text-black truncate block capitalize">{ platform.nombre }</p>
+            <div className="flex items-center">
+              <p className="text-lg font-semibold text-black cursor-auto my-3">Nº juegos</p>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   )

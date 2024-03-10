@@ -38,7 +38,7 @@ export default function Header () {
                         <details>
                             <summary>Plataformas</summary>
                             <ul className="p-2">
-                                <li><a href="/">Ver todas</a></li>
+                                <li><a href="/plataformas">Ver todas</a></li>
                                 <li><a href="/">Nueva plataforma</a></li>
                             </ul>
                         </details>
